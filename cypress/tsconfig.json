@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "target": "es2016",
+        "lib": ["es6", "dom"],
+        "types": ["cypress", "node", "cypress-each"],
+    },
+    "include": ["**/*.ts"]
+}
