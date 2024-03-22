@@ -11,12 +11,12 @@ jobs:
       # and run all Cypress tests
 
       - name: Config Environment Variable
-        run: echo "MONGODB_URI=${ secrets.MONGODB_URI }" >> $GITHUB_ENV
+        run: echo "MONGODB_URI=${{ secrets.MONGODB_URI}}" >> $GITHUB_ENV
       
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-            start: npm run dev
+            start: npm start
             wait-on: 'http://localhost:3000'
             command-prefix: npx cross-env CI=true
             command: npm run cy:run:regression
