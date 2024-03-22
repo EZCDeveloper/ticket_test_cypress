@@ -1,4 +1,4 @@
-# Welcome to Testing a Ticket Application with Cypress
+# Test a Ticket Application with Cypress
 
 ## TEST CASES PLAN for CYPRESS:
 
