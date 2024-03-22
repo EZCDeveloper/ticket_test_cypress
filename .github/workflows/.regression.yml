@@ -11,9 +11,7 @@ jobs:
       # and run all Cypress tests
 
       - name: Config Environment Variable
-        env:
-          MONGODB_URI: ${{ secrets.MONGODB_URI }}
-        run: echo "MONGODB_URI=${MONGODB_URI}" >> $GITHUB_ENV
+        run: echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" >> $GITHUB_ENV
       
       - name: Cypress run
         uses: cypress-io/github-action@v6
