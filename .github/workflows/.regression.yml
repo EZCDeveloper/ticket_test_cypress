@@ -16,7 +16,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-            start: npm start
+            start: npm run dev
             wait-on: 'http://localhost:3000'
             command-prefix: npx cross-env CI=true
             command: npm run cy:run:regression
