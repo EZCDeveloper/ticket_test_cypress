@@ -10,6 +10,9 @@ jobs:
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
 
+      - name: Config Environment Variable
+        run: echo "MONGODB_URI=${{ secrets.MONGODB_URI_STAGING }}" >> $GITHUB_ENV
+      
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
